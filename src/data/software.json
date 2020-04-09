@@ -1,0 +1,36 @@
+{
+    "softwares": [
+        {
+            "name": "Eclipse",
+            "version": "2.0.0",
+            "description": "The Eclipse IDE is famous for our Java Integrated Development Environment (IDE), but we have a number of pretty cool IDEs, including our C/C++ IDE, JavaScript/TypeScript IDE, PHP IDE, and more.You can easily combine multiple languages support and other features into any of our default packages, and the Eclipse Marketplace allows for virtually unlimited customization and extension.",
+            "installed": "false",
+            "icon": "https://www.nicepng.com/png/detail/264-2648074_eclipse-logo-png-transparent-eclipse-ide.png",
+            "script": ""
+        },
+        {
+            "name": "Visual Studio Code",
+            "version": "12.1.4",
+            "description": "Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Java, Python, PHP, Go) and runtimes (such as .NET and Unity).",
+            "installed": "false",
+            "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png",
+            "script": ""
+        },
+        {
+            "name": "Google Chrome",
+            "version": "3.6.2",
+            "description": "Chrome has everything you need to make the most of the web, like quick answers in your address bar, one-click translation, and personalized articles for you on your phone.",
+            "installed": "false",
+            "icon": "https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png",
+            "script": ""
+        },
+        {
+            "name": "DosBox",
+            "version": "0.74-3",
+            "description": "While we are hoping that one day DOSBox will run all programs ever made for the PC, we are not there yet. At present, DOSBox running on a high-end machine will roughly be the equivalent of a Pentium I PC. DOSBox can be configured to run a wide range of DOS games, from CGA/Tandy/PCjr classics up to games from the Quake era.",
+            "installed": "false",
+            "icon": "https://4.bp.blogspot.com/-U-k_n2qXBlE/U5CQi8Kw7_I/AAAAAAAAAKc/S0wp6AlLhF4/s1600/DOSBox_logo_nobg.png",
+            "script": "~/instalizy/src/backend/scripts/dosbox.sh"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "category" : [
+        {
+            "title": "All Softwares",
+            "icon": "@material-ui/icons/AllInclusiveIcon",
+            "number": "Total: 10",
+            "handleClick": "handleAll"
+        },
+        {
+            "title": "Installed",
+            "icon": "@material-ui/icons/GetAppIcon",
+            "number": "Total: 0",
+            "handleClick": "handleInstalled"
+        },
+        {
+            "title": "Not Installed",
+            "icon": "@material-ui/icons/HighlightOffIcon",
+            "number": "Total: 10",
+            "handleClick": "handleNotInstalled"
+        }
+    ]
+}
