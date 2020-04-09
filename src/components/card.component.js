@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+
 import { Card,
     CardHeader,
     CardContent,
@@ -44,7 +45,8 @@ export default function AppCard() {
     const apps = Software.softwares;
 
     const handleClick = () => {
-        install();
+        let install = window.remote.require('./backend/install')
+        install()
     }
 
     return (
