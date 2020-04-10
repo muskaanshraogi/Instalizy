@@ -8,9 +8,13 @@ import { Card,
     Avatar,
     Typography,
     Divider,
-    Button } from '@material-ui/core';
+    Button,
+    Dialog,
+    DialogContent,
+    DialogContentText,
+    DialogActions,
+    TextField } from '@material-ui/core';
 import Software from './../data/software.json';
-import install from './../backend/install';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -41,12 +45,40 @@ const useStyles = makeStyles((theme) => ({
 
 export default function AppCard() {
     const classes = useStyles();
-
+    const [open, setOpen] = React.useState(false);
+    const [password, setPassword] = React.useState(null);
+    const [soft, setSoft] = React.useState(null); 
+    const [status, setStatus] = React.useState(false);
     const apps = Software.softwares;
 
-    const handleClick = () => {
-        let install = window.remote.require('./backend/install')
-        install()
+    const handleClick = (e) => {
+        const name = e.currentTarget.id;
+        setSoft(apps.find((app) => {
+            return app.name === name
+
+        }))
+
+        setOpen(true)
+    }
+
+    const handleSubmit = (e) => {
+        if(password) {
+            setStatus(true)
+            let install = window.remote.require('./backend/install')
+            install(password, soft.script)
+
+            setTimeout(() => {
+                setOpen(false)
+            },8000)
+        } 
+    }
+
+    const handleChange = (e) => {
+        setPassword(e.target.value)
+    }
+
+    const handleClose = (e) => {
+        setOpen(false)
     }
 
     return (
@@ -67,7 +99,25 @@ export default function AppCard() {
                         }
                     </CardActions>
                 </Card>
-            ))};
+                ))};
+                <Dialog open={open} aria-labelledby="form-dialog-title">
+                {status === false ? 
+                (
+                    <DialogContent>
+                        <DialogContentText>Enter your password :</DialogContentText>
+                        <TextField autoFocus margin="dense" id="name" label="Password" type="password" fullWidth onChange={handleChange}/>
+                        <DialogActions>
+                            <Button onClick={handleClose} color="primary">Cancel</Button>
+                            <Button onClick={handleSubmit} color="primary">Ok</Button>
+                        </DialogActions>
+                    </DialogContent>  
+                ) : 
+                (
+                    <DialogContent>
+                        <DialogContentText>Installing....</DialogContentText>
+                    </DialogContent>
+                )}
+                </Dialog>
         </div>
     );
 }
