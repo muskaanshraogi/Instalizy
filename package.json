@@ -32,7 +32,7 @@
     "sudo-prompt": "^9.1.1"
   },
   "scripts": {
-    "start": "electron .",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
