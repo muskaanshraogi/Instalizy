@@ -1,7 +1,6 @@
 #!/bin/bash
 
-cd ~
-cd Instalizy/src/backend/packages
+cd ./src/backend/packages
 yes | sudo dpkg -i code_1.43.2-1585036376_amd64.deb
 yes | sudo apt-get install -f
 

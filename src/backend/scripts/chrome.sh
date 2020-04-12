@@ -1,7 +1,6 @@
 #!/bin/bash
 
-cd ~
-cd Instalizy/src/backend/packages
+cd ./src/backend/packages
 yes | sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 # if [ $? -eq 0 ]

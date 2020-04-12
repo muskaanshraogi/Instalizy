@@ -1,7 +1,6 @@
 #!/bin/bash
 
-cd ~
-cd Instalizy/src/backend/packages
+cd ./src/backend/packages
 yes | sudo dpkg -i dosbox_0.74-4.3_amd64.deb
 yes | sudo apt-get install -f
 
