@@ -5,7 +5,6 @@ A desktop application built using Reactjs and Electronjs to ease the process of 
 **Run:**   
 cd instalizy  
 (Install node_modules to both main directory and src/backend)  
-npm start  
 electron .  
 
 **Find the packages here:**  
@@ -17,4 +16,6 @@ Eclipse for C/CPP: https://www.eclipse.org/downloads/download.php?file=/technolo
   
 Visual Studio code: https://go.microsoft.com/fwlink/?LinkID=760868  
   
-DosBox : Package is already persent.
+DosBox : Package is already persent.  
+
+Place all the packages in **'Instalizy/src/backend/packages'** 
